@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+    <script>
+      const dateLocaleCode = "en-GB";
+    </script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.5;
+      }
+
+      .article-info {
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .text-example {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .article-date {
+        color: #666;
+        font-size: 14px;
+        display: block;
+        margin-top: 5px;
+      }
+
+      .comments {
+        margin-top: 30px;
+      }
+
+      .comment {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .comment-author {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #444;
+      }
+
+      .comment-text {
+        margin-bottom: 10px;
+      }
+
+      .comment-time {
+        font-size: 12px;
+        color: red;
+      }
+
+      .comment-answer {
+        margin-left: 30px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      .comment-answer .comment-author {
+        color: #555;
+      }
+
+      .comment-answer .comment-time {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article-info">
+      <span class="text-example">Example</span>
+      <span class="article-date">
+        <span data-time-function="datePublicArticle"></span>
+        <span data-time-function="timePublicArticle" data-time-value="0"></span>,
+        <span data-time-function="dayOfWeek" data-time-value="-1" data-time-format="es"></span>
+      </span>
+    </div>
+
+    <div class="comments">
+      <div class="comment">
+        <p class="comment-author">Blue Dog</p>
+        <p class="comment-text">Am I a dog?</p>
+        <div class="comment-time" data-time-function="timeHoursAgo"></div>
+      </div>
+
+      <div class="comment-answer">
+        <p class="comment-author">default dog</p>
+        <p class="comment-text">No.</p>
+        <div class="comment-time" data-time-function="timeAnswerHoursAgo"></div>
+      </div>
+
+      <div class="comment">
+        <p class="comment-author">Red wolf</p>
+        <p class="comment-text">My name is Van Helsing</p>
+        <div class="comment-time" data-time-function="timeHoursAgo"></div>
+      </div>
+
+      <div class="comment">
+        <p class="comment-author">Yellow pig</p>
+        <p class="comment-text">I like the sun</p>
+        <div class="comment-time" data-time-function="timeHoursAgo"></div>
+      </div>
+
+      <div class="comment">
+        <p class="comment-author">Pink Cat</p>
+        <p class="comment-text">Am I a cat?</p>
+        <div class="comment-time" data-time-function="timeHoursAgo"></div>
+      </div>
+
+      <div class="comment-answer">
+        <p class="comment-author">Woman</p>
+        <p class="comment-text">I've never seen pink cats.</p>
+        <div class="comment-time" data-time-function="timeAnswerHoursAgo"></div>
+      </div>
+
+      <div class="comment-answer">
+        <p class="comment-author">Man</p>
+        <p class="comment-text">Here he is!</p>
+        <div class="comment-time" data-time-function="timeAnswerHoursAgo"></div>
+      </div>
+
+      <div class="comment">
+        <p class="comment-author">Blue Dog</p>
+        <p class="comment-text">Am I a dog?...</p>
+        <div class="comment-time" data-time-function="timeHoursAgo"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./time-scripts/main.js"></script>
+  </body>
+</html>
